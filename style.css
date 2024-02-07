@@ -70,7 +70,7 @@ input[type="color"]::-moz-color-swatch{
     width: 1em;
     border: 1px solid #ddd;
 }
-gridRow{
+.gridRow{
     display: flex;
 }
 

@@ -15,7 +15,7 @@ let events = {
         move: "mousemove",
         up: "mouseup"
     },
-    touch:{
+    touch: {
         down: "touchstart",
         move: "touchmove",
         up: "touchend",
@@ -32,7 +32,7 @@ const isTouchDevice = () => {
         document.createEvent("TouchEvent");
         deviceType = "touch";
         return true;
-    } catch(e){
+    } catch(e) {
         deviceType = "mouse";
         return false;
     }
@@ -43,12 +43,12 @@ isTouchDevice();
 gridButton.addEventListener("click", () => {
     container.innerHTML = "";
     let count = 0;
-    for(let i = 0; i < gridHeight.ariaValueMax; i++){
+    for(let i = 0; i < gridHeight.value; i++){
         count += 2;
         let div = document.createElement("div");
         div.classList.add("gridRow");
 
-        for(let j = 0; j < gridWidth.ariaValueMax; j++){
+        for(let j = 0; j < gridWidth.value; j++){
             count += 2;
             let col = document.createElement("div");
             col.classList.add("gridCol");
